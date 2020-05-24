@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+	function myFunc(information) {
+		// https://www.mobilefish.com/services/record_mouse_coordinates/record_mouse_coordinates.php
+  		document.getElementById("info").innerHTML = information;
+	}
+
+</script>
+
+<body onLoad = declare()>
+<div class="container p-3 my-3 border">
+	<h2>Image Maps</h2>
+	<div class="row align-self-center">
+	<img src="workplace.jpg" id="imagename" usemap="#workmap" width="400" height="379">
+	<map name="workmap">
+	  <area onmouseover="myFunc('This is a Computer')" id="one" shape="rect" coords="34,44,270,350" alt="Computer">
+	  <area onmouseover="myFunc('This is a Phone')" id="two" shape="rect" coords="290,172,333,250" alt="Phone">
+	  <area onmouseover="myFunc('This is a Cofee Cup')" id="three" shape="rect" coords="337,300,44" alt="Cup of coffee">
+	</map>
+	</div>
+
+	<div class="row">
+		<h3 class="popuptext" id="info"></h3>
+	</div>
+</div>
+
+</body>
+</html>
