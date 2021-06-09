@@ -1,7 +1,37 @@
-#education {
-	background-color: #f0f0f0
+.tile{
+  display: table-cell;
+  width: 60px;
+  height: 60px;
+  border: 3px solid white;
+  
+
+  
+
+  cursor: pointer;
 }
 
-#courses1 {
-	background-color: #f0f0f0
+.rtile{
+
+	display: table-cell;
+	width:20px;
+	height:20px;
+	border:1px solid black;
+
+
 }
+
+.outTile{
+
+	display: table-cell;
+  width: 60px;
+  height: 60px;
+  border: 3px solid black;
+
+
+}
+/*
+.tables{
+  visibility: hidden;
+}
+*/
+

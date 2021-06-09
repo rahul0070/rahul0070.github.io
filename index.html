@@ -1,239 +1,180 @@
+
 <!DOCTYPE html>
 <html>
+<head>
+   <meta charset="utf-8">
+   <title>Test</title>
+   <script src="code.js"></script>
+   <link rel="stylesheet" href="main.css">
+</head>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<body onload="initializeColors();">
 
-<link rel="stylesheet" href="main.css">
+   <center><h1>PUZZLE MANIA!</h1></center>
+   
 
-<body>
-	<div class="jumbotron text-center" style="margin-bottom:0">
-		<h1> Rahul Kalaiselvan </h1>
-		<h6> 1616 Dr. Martin Luther King Jr. Ave. NE, Apt #7, Albuquerque, 87106 NM, USA. </h6>
-	</div>
+   <center>
+   <div id="gridPlace3" class="tables">
+       <div id="refGrid" style="display: table;padding:25px;">
+          <div id="refrow1" style="display: table-row;">      
+            <div id="re11" class="rtile"></div>
+            <div id="re12" class="rtile"></div>
+            <div id="re13" class="rtile"></div>
+          </div>
 
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <div id="refrow2" style="display: table-row;">
+            <div id="re21" class="rtile"></div>
+            <div id="re22" class="rtile"></div>
+            <div id="re23" class="rtile"></div>
+          </div>
 
-  <a class="navbar-brand" href="#">Contact</a>
+          <div id="refrow3" style="display: table-row;">
+            <div id="re31" class="rtile"></div>
+            <div id="re32" class="rtile"></div>
+            <div id="re33" class="rtile"></div>
+          </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+       </div>
+      </div>
 
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="Mailto:rahul070@unm.edu">Email</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://github.com/rahul0070"> Github </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.linkedin.com/in/rahul-kalaiselvan-11180317a/"> LinkedIn </a>
-      </li>  
-      <li class="nav-item">
-        <a class="nav-link" href="#courses1">Courses</a>
-      </li>  
-      <li class="nav-item">
-        <a class="nav-link" href="#education">Education</a>
-      </li>  
-    </ul>
-  </div> 
+   <div id="gridPlace5" class="tables">
+   <div id="grid5" style="display: table;">
+      <div id="row1" style="display: table-row;">
+         <div id="e11" onclick="canSwap(11)" class="tile"></div>
+         <div id="e12" onclick="canSwap(12)" class="tile"></div>
+         <div id="e13" onclick="canSwap(13)" class="tile"></div>
+         <div id="e14" onclick="canSwap(14)" class="tile"></div>
+         <div id="e15" onclick="canSwap(15)" class="tile"></div>
+      </div>
+      <div id="row2" style="display: table-row;">
+         <div id="e21" onclick="canSwap(21)" class="tile"></div>
+         <div id="e22" onclick="canSwap(22)" class="outTile"></div>
+         <div id="e23" onclick="canSwap(23)" class="outTile"></div>
+         <div id="e24" onclick="canSwap(24)" class="outTile"></div>
+         <div id="e25" onclick="canSwap(25)" class="tile"></div>
+      </div>
+      <div id="row3" style="display: table-row;">
+         <div id="e31" onclick="canSwap(31)" class="tile"></div>
+         <div id="e32" onclick="canSwap(32)" class="outTile"></div>
+         <div id="e33" onclick="canSwap(33)" class="outTile"></div>
+         <div id="e34" onclick="canSwap(34)" class="outTile"></div>
+         <div id="e35" onclick="canSwap(35)" class="tile"></div>
+      </div>
+         <div id="row4" style="display: table-row;">
+         <div id="e41" onclick="canSwap(41)" class="tile"></div>
+         <div id="e42" onclick="canSwap(42)" class="outTile"></div>
+         <div id="e43" onclick="canSwap(43)" class="outTile"></div>
+         <div id="e44" onclick="canSwap(44)" class="outTile"></div>
+         <div id="e45" onclick="canSwap(45)" class="tile"></div>
+      </div>
+         <div id="row5" style="display: table-row;">
+         <div id="e51" onclick="canSwap(51)" class="tile"></div>
+         <div id="e52" onclick="canSwap(52)" class="tile"></div>
+         <div id="e53" onclick="canSwap(53)" class="tile"></div>
+         <div id="e54" onclick="canSwap(54)" class="tile"></div>
+         <div id="e55" onclick="canSwap(55)" class="tile"></div>
+      </div>     
+   </div>
+   </div>
 
-</nav>
+   <div id="gridPlace4" class="tables">
+       <div id="refGrid" style="display: table;padding:25px;">
+          <div id="refrow1" style="display: table-row;">      
+            <div id="rn11" class="rtile"></div>
+            <div id="rn12" class="rtile"></div>
+            <div id="rn13" class="rtile"></div>
+            <div id="rn14" class="rtile"></div>
+          </div>
 
-<div id="main" class="container-fluid" >
-<div id="about" class="container"  style="margin-top:30px">
+          <div id="refrow2" style="display: table-row;">
+            <div id="rn21" class="rtile"></div>
+            <div id="rn22" class="rtile"></div>
+            <div id="rn23" class="rtile"></div>
+            <div id="rn24" class="rtile"></div>
+          </div>
 
-	<div class="row">
-	<div class="col-5">
-		<div class="img-fluid" alt="Responsive image" style="margin-bottom: 30px">
-			<img src="MyImage.png" style="width:100%" class="img-thumbnail">
-		</div>
+          <div id="refrow3" style="display: table-row;">
+            <div id="rn31" class="rtile"></div>
+            <div id="rn32" class="rtile"></div>
+            <div id="rn33" class="rtile"></div>
+            <div id="rn34" class="rtile"></div>
+          </div>
 
-		<h3> About </h3>
-		<p>Programming intern at <a href="http://www.porterlee.com/">Porter Lee Corporation</a>, Schaumburg IL.</p>
-		<p> Computer Science graduate student at <a href="https://www.cs.unm.edu/">The University of New Mexico</a>, Albuquerque NM. </p>
-		<a class="nav-link" href="Resume_V1.2.pdf"><b>View Resume</b></a>
+         <div id="refrow4" style="display: table-row;">
+            <div id="rn41" class="rtile"></div>
+            <div id="rn42" class="rtile"></div>
+            <div id="rn43" class="rtile"></div>
+            <div id="rn44" class="rtile"></div>
+          </div>
+       </div>
+   </div>
 
-	</div>
-	<div class="col-2">
-	</div>
-
-	<div class="col-5" style="margin-top: 50px">
-
-		<h4> Programming Languages</h4>
-		<div class="row" style="margin-top: 20px">
-			<div class="col-sm">
-				<ul>
-					<li>Python</li>
-					<li>Java</li>
-					<li>C</li>
-					<li>JavaScript</li>
-					
-					<li>C++</li>
-					<li>R</li>
-
-					<li>Haskell</li>
-				</ul>
-			</div>
-
-			<div class="col-sm">
-				<ul>
-					<li>CSS</li>
-					<li>PHP</li>
-					<li>HTML</li>
-					<li>XML</li>
-					<li>SWI-Prolog</li>
-				</ul>
-			</div>
-		</div>		
-
-		<div style="margin-top: 20px">
-		<h4> Frameworks and Technologies </h4>
-		</div>
-
-		<div class="row" style="margin-top: 20px">
-			<div class="col-sm">
-				<ul>
-					<li>Android Studio</li>
-					<li>Vue</li>
-					<li>Scikit-learn</li>
-					<li>Angular 6</li>
-					<li>Selenium</li>
-					<li>Ruby</li>
-					<li>Bootstrap</li>
-					<li>HTML</li>
-					
-				</ul>
-			</div>
-			<div class="col-sm">
-				<ul>
-					<li>React Native</li>
-					<li>Gradle</li>
-					<li>REST APIs</li>
-					<li>Pandas</li>
-					<li>MySQL</li>
-					<li>SOAP</li>
-					<li>Git</li>
-					<li>Django</li>
-					<li>Agile Methods</li>
-				</ul>
-			</div>
-
-
-	</div>
-	</div>
-</div>
-
-
-<div id="education" class="container"  style="margin-top:40px">
-		<h3>Education</h3>
-
-<div class="row" style="margin-top:20px">
-	<ul>
-		<li>
-			<h6> Masters of Science - University of New Mexico, USA </h6>
-			<p><i>(Expected graduation - May 2021)</i></p>
-			<p> Computer Science </p>
-		</li>
-
-		<li>
-			<h6> Bachelor of Technology - SRM Institite of Science and Technology, India </h6>
-			<p><i>(2015 - 2019)</i></p>
-			<p> Computer Science and engineering </p>
-		</li>
-	</ul>
-
-</div>
-</div>
-
-<div id="experience" class="container" style="margin-top:40px">
-		<h3>Experience</h3>
-	<div class="row" style="margin-top:20px">
-	<ul>
-		<li>
-			<h6>Software Programming Intern, Porter Lee Corporation, Shaumburg, IL.</h6>
-			<p><i>(May 2019 - present)</i></p>
-			<p>Developed, tested, and documented Android Applications for evidence management system (EMS) and <a href="http://www.porterlee.com/Documents/pdf_files/LIMSFlier.pdf">Laboratory Inventory Management</a> (LIMS) in Java and SQL.</p>
-			
-		</li>
-
-		<li>
-			<h6> Research Aide, University of New Mexico, NM</h6>
-			<p> Assisted with an ongoing research to create a model to simulate genetic variation and mutation in single and multi-loci organisms in C and Python. </p>
-		</li>
-	</ul>
-	</div>
-</div>
+   <div id="gridPlace6" class="tables">
+      <div id="grid6" style="display: table;">
+      <div id="row1" style="display: table-row;">
+         <div id="n11" onclick="canSwap(11)" class="tile"></div>
+         <div id="n12" onclick="canSwap(12)" class="tile"></div>
+         <div id="n13" onclick="canSwap(13)" class="tile"></div>
+         <div id="n14" onclick="canSwap(14)" class="tile"></div>
+         <div id="n15" onclick="canSwap(15)" class="tile"></div>
+         <div id="n16" onclick="canSwap(16)" class="tile"></div>
+      </div>
+      <div id="row2" style="display: table-row;">
+         <div id="n21" onclick="canSwap(21)" class="tile"></div>
+         <div id="n22" onclick="canSwap(22)" class="outTile"></div>
+         <div id="n23" onclick="canSwap(23)" class="outTile"></div>
+         <div id="n24" onclick="canSwap(24)" class="outTile"></div>
+         <div id="n25" onclick="canSwap(25)" class="tile"></div>
+         <div id="n26" onclick="canSwap(26)" class="tile"></div>
+      </div>
+      <div id="row3" style="display: table-row;">
+         <div id="n31" onclick="canSwap(31)" class="tile"></div>
+         <div id="n32" onclick="canSwap(32)" class="outTile"></div>
+         <div id="n33" onclick="canSwap(33)" class="outTile"></div>
+         <div id="n34" onclick="canSwap(34)" class="outTile"></div>
+         <div id="n35" onclick="canSwap(35)" class="tile"></div>
+         <div id="n36" onclick="canSwap(36)" class="tile"></div>
+      </div>
+         <div id="row4" style="display: table-row;">
+         <div id="n41" onclick="canSwap(41)" class="tile"></div>
+         <div id="n42" onclick="canSwap(42)" class="outTile"></div>
+         <div id="n43" onclick="canSwap(43)" class="outTile"></div>
+         <div id="n44" onclick="canSwap(44)" class="outTile"></div>
+         <div id="n45" onclick="canSwap(45)" class="tile"></div>
+         <div id="n46" onclick="canSwap(46)" class="tile"></div>
+      </div>
+         <div id="row5" style="display: table-row;">
+         <div id="n51" onclick="canSwap(51)" class="tile"></div>
+         <div id="n52" onclick="canSwap(52)" class="tile"></div>
+         <div id="n53" onclick="canSwap(53)" class="tile"></div>
+         <div id="n54" onclick="canSwap(54)" class="tile"></div>
+         <div id="n55" onclick="canSwap(55)" class="tile"></div>
+         <div id="n56" onclick="canSwap(56)" class="tile"></div>
+      </div>   
+         <div id="row6" style="display: table-row;">
+         <div id="n61" onclick="canSwap(61)" class="tile"></div>
+         <div id="n62" onclick="canSwap(62)" class="tile"></div>
+         <div id="n63" onclick="canSwap(63)" class="tile"></div>
+         <div id="n64" onclick="canSwap(64)" class="tile"></div>
+         <div id="n65" onclick="canSwap(65)" class="tile"></div>
+         <div id="n66" onclick="canSwap(66)" class="tile"></div>
+      </div>   
+   </div>
+   </div>
+     
+     
+     <div id="time" style="padding: 10px"> </div>
 
 
-<div id="courses1" class="container"  style="margin-top:40px">
-		<h3>Courses</h3>
-		<h6><i>Associated with University of New Mexico</i></h6>
 
-<div class="row">
+   <button onClick="window.location.reload()">Refresh</button>
 
-		<div class="col-sm">
-			<ul>
-				<li> Algorithms & Data Structures
-				<li> Introduction to Machine Learning</li>
-				<li> Introduction to Artificial Intelligence </li>
-			</ul>
-		</div>
-		<div class="col-sm">
-			<ul>
-				<li> Computer Networks </li>
-				<li> Software Foundation </li>
-				<li> Software Development Practices </li>
-			</ul>
-		</div>
-		<div class="col-sm">
-			<ul>
-				<li> Introduction to Cloud Computing </li>
-				<li> Database Management </li>
-			</ul>
-		</div>
-</div>
+   <div>
+         <h2 id="win" ></h2>
+      </div>
 
-<div id="courses2" class="container"  style="margin-top:30px">
-		<h6><i>Associated with SRM Institute of Science and Technology</i></h6>
+      <div id="result"></div>
 
-<div class="row">
-
-		<div class="col-sm">
-			<ul>
-				<li> Data Structures </li>
-				<li> Data Mining </li>
-			</ul>
-		</div>
-		<div class="col-sm">
-			<ul>
-				<li> Computer Networks </li>
-				<li> Advanced Computer Networks </li>
-			</ul>
-		</div>
-		<div class="col-sm">
-			<ul>
-				<li> Theory of Computation </li>
-				<li> Introduction to Web Development </li>
-			</ul>
-		</div>
-</div>
-</div>
-</div>
-
-<div id="footer" class="jumbotron text-center" style="margin-top:40px" style="margin-bottom:0px">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- Add font awesome icons -->
-<a href="https://www.facebook.com/rahul.kalaiselvan" class="fa fa-facebook"></a>
-<a href="https://www.linkedin.com/in/rahul-kalaiselvan-11180317a/" class="fa fa-linkedin"></a>
-<a href="https://www.instagram.com/rahul_kalaiselvan/" class="fa fa-instagram"></a>
-<a href="https://github.com/rahul0070" class="fa fa-github"></a>
-
-<p><b>Copyright © 2021 Rahul Kalaiselvan</b></p>
-</div>
-
+   </center>
 </body>
 </html>
